@@ -1,0 +1,519 @@
+:root {
+    --color-main-400: rgb(37, 22, 53);
+    --color-light-200: rgb(218, 215, 70);
+    --color-light-300: rgb(153, 151, 60);
+    --color-dark-600: rgb(2, 91, 52);
+    --color-dark-700: rgb(79, 47, 129);
+    --color-dark-800: rgb(40, 34, 50);
+
+    --font-family-main: "contest-mn", sans-serif;
+    --font-family-second: "bitcount-mono-single-circle", sans-serif;
+    --font-family-third: "puffin-arcade-chrome", sans-serif;
+
+    --font-family-header: var(--font-family-second);
+    --font-family-footer: var(--font-family-third);
+    --font-family-body: var(--font-family-main);
+    --font-family-a: var(--font-family-main);
+    --font-family-button: var(--font-family-third);
+
+    --font-size-400: 1rem;
+    --font-size-500: 1.5rem;
+    --font-size-600: 1.75rem;
+    --font-size-700: 2.5rem;
+    --font-size-800: 4rem;
+   
+    --font-size-heading1: var(--font-size-800);
+    --font-size-heading2: var(--font-size-700);
+    --font-size-heading3: var(--font-size-600);
+    --font-size-main: var(--font-size-400);
+    --font-size-header: var(--font-size-500);
+    --font-size-footer: var(--font-size-400);
+    --font-size-button: var(--font-size-400);
+}
+/* ================== Contents ==============================
+1 Utility Classes
+    Colors
+    Fonts
+    Containers
+    Flow
+    Alignment
+2 Defaults
+3 Modules
+    Links
+    Buttons
+    Inputs
+4 Media Queries
+    Non-Mobile
+    Mobile
+    Tablet
+5 Layout
+    Header
+    Main
+    Footer 
+/* 1 Utility Classes */
+    /* Colors */
+
+.color-white-100 {
+    color: white;
+}
+.color-light-200 {
+    color: var(--color-light-200);
+}
+.color-light-300 {
+    color: var(--color-light-300);
+}
+.color-main-400 {
+    color: var(--color-main-400);
+}
+.color-dark-600 {
+    color: var(--color-dark-600);
+}
+.color-dark-700 {
+    color: var(--color-dark-700);
+}
+.color-dark-800 {
+    color: var(--color-dark-800);
+}
+.color-black-900 {
+    color: black;
+}
+.background-white-100 {
+    background-color: white;
+}
+.background-light-200 {
+    background-color: var(--color-light-200);
+}
+.background-light-300 {
+    background-color: var(--color-light-300);
+}
+.background-main-400 {
+    background-color: var(--color-main-400);
+}
+.background-dark-600 {
+    background-color: var(--color-dark-600);
+}
+.background-dark-700 {
+    background-color: var(--color-dark-700);
+}
+.background-dark-800 {
+    background-color: var(--color-dark-800);
+}
+.background-black-900 {
+    background-color: black;
+}
+
+    /* fonts */
+
+.font-size-heading1 {
+    font-size: var(--font-size-heading1);
+}
+.font-size-heading2 {
+    font-size: var(--font-size-heading2);
+}
+.font-size-heading3 {
+    font-size: var(--font-size-heading3);
+}
+.font-size-main {
+    font-size: var(--font-size-main);
+}
+.font-size-header {
+    font-size: var(--font-size-header);
+}
+.font-size-footer {
+    font-size: var(--font-size-footer);
+}
+.font-family-header {
+    font-family: var(--font-family-header);
+}
+.font-family-footer {
+    font-family: var(--font-family-footer);
+}
+.font-family-main {
+    font-family: var(--font-family-main);
+}
+.font-family-second {
+    font-family: var(--font-family-second);
+}
+.font-family-third {
+    font-family: var(--font-family-third);
+}
+.font-family-footer {
+    font-family: var(--font-family-footer);
+}
+.font-family-a {
+    font-family: var(--font-family-a);
+}
+.font-family-button {
+    font-family: var(--font-family-button);
+}
+
+    /* containers*/
+
+.flex-container {
+    display: flex;
+}
+.grid-container {
+    display: grid;
+}
+
+    /* flow */
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-based {
+    flex: 1 1 100%;
+}
+.overflow-scroll {
+    overflow: scroll;
+}
+.wrapper {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+    /* alignment */
+
+.center-align-items {
+    align-items: center;
+}
+.center-align-content {
+    align-content: center;
+}
+.center-align-self {
+    align-self: center;
+}
+.center-justify-items {
+    justify-items: center;
+}
+.center-justify-content {
+    justify-content: center;
+}
+.center-justify-self {
+    justify-self: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.text-center {
+    text-align: center;
+}
+.height-100 {
+    height: 100%;
+}
+
+/* 2 Defaults */
+
+    /* set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 18px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    color: white;
+    font-family: var(--font-family-third);
+    
+}
+
+    /* images */
+
+.logo img {
+    width: 4rem;
+    height: auto;
+}
+    
+.mission img {
+    padding: 1.5rem;
+    margin: auto auto;
+}
+
+    /* remove default margins */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+    /* box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+    /* make images easier to layout */
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+    /* remove list styles on ol, li w/ a */
+
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+    /* remove animations for those who set preference */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 3 modules */
+
+    /* links */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover,
+a:focus {
+    color: var(--color-dark-700);
+}
+a:active {
+    color: var(--color-light-200);
+}
+
+    /*buttons*/
+
+button {
+    background-color: var(--color-dark-800);
+    color: white;
+    font-family: var(--font-family-button);
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px black;
+    padding-inline: .5rem;
+}
+button:hover {
+    color: var(--color-dark-700);
+}
+button:active {
+    color: var(--color-light-200);
+}
+
+    /* inputs */
+
+label {
+    color: white;
+}
+
+input:hover {
+    border: 1px solid black;
+}
+
+/* 4 media queries */
+    /* non mobile */
+        
+@media (min-width: 600px) {
+    .mobile {
+        display: none;
+    }
+    header {
+        height: 31.25rem;
+    }
+    .nav-main li {
+        display: inline;
+        padding-inline: 1.25rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .a {
+        grid-column: 1 / span 7;
+        grid-row: 1 / span 6;
+    }
+    .b {
+        grid-column: 8 / span 9;
+        grid-row: 1 / span 2;
+    
+    }
+    .c {
+        grid-column: 10 / span 8;
+        grid-row: 3 / span 5;
+    }
+    .d {
+        grid-column: 1 / span 7;
+        grid-row: 5 / span 2;
+        padding-top: 2rem;
+
+    }
+    .e {
+        grid-column: 1 / span 17;
+        grid-row: 6 span 1;
+    }
+
+    .a .box {
+        width: 100%;
+    }
+    
+    .e .flex-container {
+        gap: 2rem;
+    }
+    
+    .e .card {
+        width: 40%;
+        margin: 0 auto;
+    }
+    
+    .e .textblock {
+        padding-block: 2rem;
+    }
+
+}
+        /* mobile */
+
+@media (max-width: 600px) {
+    .desktop {
+        display: none;
+    }
+
+    header {
+        height: 50rem;
+    }
+
+    .nav-main li {
+        display: inline;
+        padding-inline: 0rem;
+    }
+
+    .a,
+    .b,
+    .c,
+    .d,
+    .e {
+        grid-column: 1 / span 13;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .b {
+        flex-direction: column;
+    }
+
+    #genres-section h3,
+    figcaption {
+        font-size: 1.5rem;
+    }
+
+    #collage h3 {
+        font-size: 1.6rem;
+        padding-block: .5rem;
+    }
+    
+    #mission {
+        padding-bottom: 2rem;
+    }
+
+}
+        /* tablet */
+
+@media (min-width: 601px) and (max-width: 900px) {
+    html {
+        font-size: 18px;
+    }
+
+    .nav-main li {
+        display: inline;
+        padding-inline: .5rem;
+    }
+}
+
+/*  5 layout */
+
+    /* header section  */
+
+header {
+    background-image: url(photos/AdobeSpaceLand.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 51%;
+
+}
+
+.hero {
+    height: 80%;
+}
+
+.navbar {
+    padding-inline: 2rem;
+
+}
+
+.nav-main {
+    text-shadow: 0px 3px 3px black;
+}
+
+    /* main section  */
+
+.mission {
+    padding-top: 2rem;
+}
+
+.button-mission {
+    margin: 0 auto 1rem auto;
+}
+
+.desktop.d {
+    padding-top: 2rem;
+}
+
+.e .flex-container {
+    gap: 2rem;
+}
+
+.e .card {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.e .textblock {
+    padding-block: 2rem;
+}
+
+.genres {
+    overflow: auto;
+}
+
+span {
+    text-align: end;
+}
+    /* footer section  */
